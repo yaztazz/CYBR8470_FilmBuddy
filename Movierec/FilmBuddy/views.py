@@ -1,4 +1,4 @@
-##Imported code- not my own! Need to make some additional adjustments to fit my specififed user stories better
+##Imported code- not my own! Need to make some additional adjustments to better fit my user stories
 
 
 from django.shortcuts import render
