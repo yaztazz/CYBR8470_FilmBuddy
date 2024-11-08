@@ -83,6 +83,22 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="Z1hIB7-85nQ-7njpaA-8-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Z1hIB7-85nQ-7njpaA-8-10" target="Z1hIB7-85nQ-7njpaA-8-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="1124" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="500" />
+              <mxPoint x="180" y="920" />
+              <mxPoint x="400" y="920" />
+              <mxPoint x="400" y="1100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1hIB7-85nQ-7njpaA-8-40" value="Verifies login with two factor" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Z1hIB7-85nQ-7njpaA-8-39">
+          <mxGeometry x="0.1915" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <object placeholders="1" c4Name="Authentication System" c4Type="Software System" c4Description="Allows user authentication at login" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="Z1hIB7-85nQ-7njpaA-8-10">
           <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
             <mxGeometry x="370" y="440" width="240" height="120" as="geometry" />
@@ -123,8 +139,8 @@
         </object>
         <mxCell id="Z1hIB7-85nQ-7njpaA-8-16" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="850" y="870" as="sourcePoint" />
-            <mxPoint x="850" y="960" as="targetPoint" />
+            <mxPoint x="870" y="860" as="sourcePoint" />
+            <mxPoint x="870" y="950" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="Z1hIB7-85nQ-7njpaA-8-17" value="Zoom in on FilmBuddy" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
@@ -155,9 +171,12 @@
             <mxGeometry x="740" y="1290" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
+        <mxCell id="Z1hIB7-85nQ-7njpaA-8-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Z1hIB7-85nQ-7njpaA-8-21" target="Z1hIB7-85nQ-7njpaA-8-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <object placeholders="1" c4Name="Movie Catalog" c4Type="Container" c4Technology="" c4Description="Stores all-time movie catalog information" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="Z1hIB7-85nQ-7njpaA-8-21">
           <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
-            <mxGeometry x="730" y="1540" width="240" height="120" as="geometry" />
+            <mxGeometry x="740" y="1520" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="Z1hIB7-85nQ-7njpaA-8-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.454;entryY=0.983;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Z1hIB7-85nQ-7njpaA-8-12" target="fG0gLdGStZVWvB5atDBO-6">
@@ -213,6 +232,23 @@
           <mxGeometry x="0.3233" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1hIB7-85nQ-7njpaA-8-42" value="Reads and writes data (SQL)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="770" y="1478" width="180" height="30" as="geometry" />
+        </mxCell>
+        <object placeholders="1" c4Name="User login" c4Type="ContainerScopeBoundary" c4Application="Component" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="Z1hIB7-85nQ-7njpaA-8-44">
+          <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="347.5" y="1850" width="1020" height="900" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="Z1hIB7-85nQ-7njpaA-8-45" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="830" y="1720" as="sourcePoint" />
+            <mxPoint x="830" y="1820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1hIB7-85nQ-7njpaA-8-46" value="Zoom in on user login" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="890" y="1748" width="140" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
