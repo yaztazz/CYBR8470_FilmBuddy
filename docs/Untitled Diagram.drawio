@@ -209,6 +209,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="Z1hIB7-85nQ-7njpaA-8-38" value="Updates from repo using HTTPS" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Z1hIB7-85nQ-7njpaA-8-37">
+          <mxGeometry x="0.3233" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
