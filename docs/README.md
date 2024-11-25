@@ -4,11 +4,11 @@ Acceptance Criteria: The system provides a personalized film recommendation list
 
 ## User Story 2
 As a film critic, I want to rate and review movies, so I can share my opinions with the community.
-Acceptance Criteria: Film critics can rate movies using a rating system. Reviews can be seen on the details of the movie in the app by critics and all other users.
+Acceptance Criteria: Film critics can rate movies using a rating system. Once approved, reviews can be seen on the details of the movie in the app by critics and all other users.
 
 ## User Story 3
 As an admin, I want to approve user-submitted content, so I can maintain quality and relevance on the platform.
-Acceptance Criteria: Admins receive notifications for new user-submitted content awaiting approval. 
+Acceptance Criteria: Admins receive notifications for new user-submitted content awaiting approval. Admins can then approve or deny the request. A notification with the deny reasoning will be sent to the user.
 
 ## User Story 4
 As a teacher, I want to see age-appropriate content, so I can ensure my students only see suitable films that I play in the classroom.
