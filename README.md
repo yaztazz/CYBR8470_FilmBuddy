@@ -3,10 +3,7 @@ My app is a movie recommendation app called FilmBuddy. FilmBuddy is perfect for 
 
 ## Installation
 ```bash
-docker-build .
-docker-compose run django bash
-python manage.py migrate
-python manage.py createsuperuser
+https://hub.docker.com/r/429lab/filmbuddy
 python manage.py runserver
 docker pull 429lab/filmbuddy
 ```
