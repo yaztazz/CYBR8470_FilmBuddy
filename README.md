@@ -13,7 +13,7 @@ Access the app at http://127.0.0.1:8000 or the host's IP.
 ## Getting Started
 To run my Movie Recommendation App  simply,
 ```bash
-docker-compose up
+Access the app at http://127.0.0.1:8000 or the host's IP.
 ```
 See in-app menus for help with using specific features.
 
