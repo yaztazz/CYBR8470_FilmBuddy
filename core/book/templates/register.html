@@ -1,0 +1,92 @@
+<div style="background-image: url('http://127.0.0.1:8000/static/images/collage.jpg');  
+             background-size: cover; 
+             background-position: center; 
+             background-repeat: no-repeat; 
+             min-height: 100vh; 
+             display: flex; 
+             align-items: center; 
+             justify-content: center;">
+    <div class="container mt-5" style="background: linear-gradient(to bottom, #1a1a1a, #000); color: white; padding: 20px; max-width: 400px; margin: 0 auto; border-radius: 10px;">
+        <h1 class="text-center" style="color: blue; font-weight: 700; font-size: 2.5rem; font-family: 'Poppins', sans-serif;">FilmBuddy Register</h1>
+        <div class="register-form mt-4">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="form-group mt-3">
+                    <label for="username" style="color: white; font-size: 1.2rem;">Username:</label>
+                    <input type="text" id="username" class="form-control" name="username" placeholder="Enter your username" style="background-color: black; color: white; border: 1px solid lightgrey; border-radius: 5px; padding: 10px;" required>{{ username|escape }}
+                </div>
+                <div class="form-group mt-3">
+                    <label for="email" style="color: white; font-size: 1.2rem;">Email:</label>
+                    <input type="email" id="email" class="form-control" name="email" placeholder="Enter your email" style="background-color: black; color: white; border: 1px solid lightgrey; border-radius: 5px; padding: 10px;" required>{{ email|escape }}
+                </div>
+                <div class="form-group mt-3">
+                    <label for="password" style="color: white; font-size: 1.2rem;">Password:</label>
+                    <input type="password" id="password" class="form-control" name="password" placeholder="Enter your password" style="background-color: black; color: white; border: 1px solid lightgrey; border-radius: 5px; padding: 10px;">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="password2" style="color: white; font-size: 1.2rem;">Confirm Password:</label>
+                    <input type="password" id="password2" class="form-control" name="password2" placeholder="Confirm your password" style="background-color: black; color: white; border: 1px solid lightgrey; border-radius: 5px; padding: 10px;">
+                </div>
+                <!-- Identity Verification Section -->
+                <div class="form-group mt-4" style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <label for="social_media" style="color: white; font-size: 1.2rem; font-weight: bold; margin-right: 10px;">Identity Verification Required: Users must link social media account</label>
+                    <select id="social_media" class="form-control" name="social_media" style="background-color: black; color: white; border: 1px solid lightgrey; border-radius: 5px; padding: 10px; flex: 1;">
+                        <option value="">Select a platform</option>
+                        <option value="twitter">X/Twitter</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="reddit">Reddit</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="pinterest">Pinterest</option>
+                        <option value="tiktok">TikTok</option>
+                        <option value="youtube">YouTube</option>
+                        <option value="discord">Discord</option>
+                    </select>
+                </div>
+
+<script>
+    // Securely handle user-provided data
+    document.getElementById('social_media').addEventListener('change', function () {
+        const selectedPlatform = sanitizeInput(this.value);
+        console.log('Selected platform:', selectedPlatform);
+    });
+
+    document.getElementById('two_factor').addEventListener('change', function () {
+        const selectedMethod = sanitizeInput(this.value);
+        console.log('Selected two-factor method:', selectedMethod);
+    });
+
+    // Sanitize user-provided input to prevent XSS
+    function sanitizeInput(input) {
+        const div = document.createElement('div');
+        div.textContent = input;
+        return div.innerHTML; // Returns sanitized string
+    }
+</script>
+
+</div>
+<!-- Two-Factor Authentication Section -->
+                <div class="form-group mt-4">
+                    <label for="two_factor" style="color: white; font-size: 1.2rem; font-weight: bold;">Two-Factor Authentication Required:</label>
+                    <select id="two_factor" class="form-control" name="two_factor" style="background-color: black; color: white; border: 1px solid lightgrey; border-radius: 5px; padding: 10px;">
+                        <option value="">Select a method</option>
+                        <option value="authenticator_app">Authenticator App</option>
+                        <option value="sms">SMS</option>
+                        <option value="email">Email</option>
+                    </select>
+                </div>
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-block" style="background-color: blue; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-size: 1.2rem; cursor: pointer;">Register</button>
+                <div class="form-group mt-4">
+    {% if messages %}
+    <div class="alert alert-success" style="background-color: green; color: white; border-radius: 5px; padding: 10px; text-align: center; margin-bottom: 15px;">
+        {% for message in messages %}
+            {{ message|escape }}
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+</form>
+            <p class="text-center mt-4" style="color: white;">Already have an account? <a href="{% url 'login' %}" style="color: blue; text-decoration: none;">Login here</a></p>
+        </div>
+    </div>
+</div>

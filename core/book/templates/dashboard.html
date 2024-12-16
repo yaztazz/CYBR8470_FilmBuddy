@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block start %}
+<div style="background-color: #000; color: white; min-height: 100vh; padding: 50px;">
+    <!-- Header -->
+    <h1 class="text-center" style="color: blue; font-weight: 700; font-size: 3rem; font-family: 'Poppins', sans-serif;">
+        Welcome to Your Movie Dashboard
+    </h1>
+
+    <!-- User Information and Logout -->
+    <p class="text-center" style="font-size: 1.5rem; margin-top: 20px;">
+        Hello, {{ request.user.username }}! You are part of the <strong style="color: blue;">{{ group_name }}</strong> group.
+    </p>
+    <div class="text-center mt-3">
+        <form method="post" action="{% url 'logout' %}" style="text-align: center; margin-top: 20px;">
+            {% csrf_token %}
+            <button type="submit" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+                Logout
+            </button>
+        </form>
+    </div>
+
+    <!-- Menu Section -->
+    <div class="container mt-4">
+        <div class="text-center">
+            <a href="{% url 'watch_history' %}" style="color: blue; font-size: 1.3rem; margin: 0 15px; text-decoration: none;">My Watch History</a>
+            <a href="{% url 'top_rated' %}" style="color: blue; font-size: 1.3rem; margin: 0 15px; text-decoration: none;">Top Rated</a>
+            <a href="{% url 'recommend_movie' %}" style="color: blue; font-size: 1.3rem; margin: 0 15px; text-decoration: none;">Recommend a Movie</a>
+            {% if group_name == "Movie Critic" %}
+                <a href="{% url 'submit_review' %}" style="color: blue; font-size: 1.3rem; margin: 0 15px; text-decoration: none;">Submit a Review</a>
+                <a href="{% url 'review_history' %}" style="color: blue; font-size: 1.3rem; margin: 0 15px; text-decoration: none;">My Review History</a>
+            {% endif %}
+            {% if group_name == "Teacher" %}
+                <a href="{% url 'g_rated' %}" style="color: blue; font-size: 1.3rem; margin: 0 15px; text-decoration: none;">G Rated</a>
+                <a href="{% url 'pg_rated' %}" style="color: blue; font-size: 1.3rem; margin: 0 15px; text-decoration: none;">PG Rated</a>
+                <a href="{% url 'pg13_rated' %}" style="color: blue; font-size: 1.3rem; margin: 0 15px; text-decoration: none;">PG-13 Rated</a>
+            {% endif %}
+            {% if group_name == "Admin" %}
+                <a href="{% url 'approve_reviews' %}" style="color: blue; font-size: 1.3rem; margin: 0 15px; text-decoration: none;">Approve Review Submissions</a>
+                <a href="{% url 'manage_users' %}" style="color: blue; font-size: 1.3rem; margin: 0 15px; text-decoration: none;">Manage Users</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Movie Display Section -->
+    <div class="container mt-5">
+        <h2 class="text-center" style="color: white; font-size: 2rem;">Your Movies</h2>
+        <div class="row mt-4">
+            {% for movie in movies %}
+            <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: black; border: 1px solid lightgrey; text-align: center; padding: 10px; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);">
+                    <img src="{{ movie.image_url }}" alt="{{ movie.title }}" style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1 / 1; border-radius: 5px;">
+                    <div class="card-body">
+                        <p style="color: white; font-size: 1.1rem; font-weight: 500;">{{ movie.title }}</p>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p class="text-center" style="color: white; font-size: 1.2rem;">No movies to display.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
