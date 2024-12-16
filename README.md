@@ -3,9 +3,11 @@ My app is a movie recommendation app called FilmBuddy. FilmBuddy is perfect for 
 
 ## Installation
 ```bash
-https://hub.docker.com/r/429lab/filmbuddy
-python manage.py runserver
+Go to: https://hub.docker.com/r/429lab/filmbuddy
 docker pull 429lab/filmbuddy
+docker run -p 8000:8000 429lab/filmbuddy:latest
+Access the app at http://127.0.0.1:8000 or the host's IP.
+
 ```
 
 ## Getting Started
